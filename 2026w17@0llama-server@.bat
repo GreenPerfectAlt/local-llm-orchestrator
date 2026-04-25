@@ -11,12 +11,13 @@ set "SYS_PROMPT=%DOCS_DIR%\syspromt.txt"
 set "LLAMA_SERVER=%AI_SOFT%llama\llama-server.exe"
 
 set LLAMA_FLAGS=-c 32000 ^
---no-mmap --mlock ^
 -ctk q8_0 -ctv q8_0 ^
 --reasoning off --reasoning-budget 0 ^
 -n -1 -ngl all --prio 3 -fa on -fit on ^
 -t 6 --threads-batch 6 ^
 --parallel 1 --jinja --keep 1 --embedding --port 11434 
+
+::--no-mmap --mlock ^
 
 :: ==========================================
 :: 1. 🧠 ПОИСК МОДЕЛЕЙ (ИСТОРИЯ + СКАН)
